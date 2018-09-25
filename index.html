@@ -18,23 +18,26 @@
 </center>
 	<script>
 		function sortear(){
+	
 
 
 		var Maior = document.getElementById("Maior").value;
 	    	var menor = document.getElementById("Menor").value;
 	    	var sorteio = document. getElementById("Sortear").value;
 	    	vetor = new Array();
-	    
+	   
+	   	if(Maior == 0 || menor ==0 || sorteio==0){
+	   		alert("Insira apenas valores maiores que 0");
+	   	} else{
 
-
-
-
-	    	for(var i = 0; i<sorteio;i++){
-	    		var r = Math.floor((Math.random()*Maior)+menor);
-	    		vetor.push(r+1);		
-		}	
+	    		for(var i = 0; i<sorteio;i++){
+	    			var r = Math.floor((Math.random()*Maior)+menor);
+	    			vetor.push(r+1);		
+			}	
 		document.write(vetor);
 		}
+		}
+
 		</script>
 	
 
