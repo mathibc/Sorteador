@@ -23,16 +23,16 @@
 		var Maior = document.getElementById("Maior").value;
 	    	var menor = document.getElementById("Menor").value;
 	    	var sorteio = document. getElementById("Sortear").value;
-	    	vetor = new Array(sorteio);
+	    	vetor = new Array();
+	    
 
 
 
 
-	    	for(var i = 0; i<sorteio-1;i++){
+	    	for(var i = 0; i<sorteio;i++){
 	    		var r = Math.floor((Math.random()*Maior)+menor);
-	    		vetor.push(r);		
-		}
-			
+	    		vetor.push(r+1);		
+		}	
 		document.write(vetor);
 		}
 		</script>
