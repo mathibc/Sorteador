@@ -19,20 +19,37 @@
 	<script>
 		function sortear(){
 			var maior = parseInt(document.getElementById("Maior").value);
-	    		var menor = parseInt(document.getElementById("Menor").value);
-	    		var sorteio = parseInt(document. getElementById("Sortear").value);
-	    		vetor = new Array();
+	    	var menor = parseInt(document.getElementById("Menor").value);
+	    	var sorteio = parseInt(document. getElementById("Sortear").value);
+	    	var resultado = "Os números sorteados são:\n";
+	    	vetor = new Array();
 	   
-	   		if(Maior == 0 || menor ==0 || sorteio==0){
-	   			alert("Insira apenas valores maiores que 0");
-	   		} else{
-	    			for(var i = 0; i<sorteio;i++){
-	    				var r = Math.floor(Math.random() * (maior - menor + 1) + menor);
-	    				vetor.push(r);		
-				}
-			document.write(vetor);
+	   	if(Maior == 0 || menor ==0 || sorteio==0){
+	   		alert("Insira apenas valores maiores que 0");
+	   	} 
+	   	else if(maior<menor){
+	   		alert("Insira o menor numero no campo do Menor e o maior numero no campo do Maior");
+
+	   	}
+	   	else if(maior==menor){
+	   		alert("Os numeros nao podem ser iguais");
+	   	}
+
+	   	else{
+	    		for(var i = 0; i<sorteio;i++){
+	    			var r = Math.floor(Math.random() * (maior - menor + 1) + menor);
+	    			vetor.push("<br>"+r);
+	    			   					
 			}
+		
+    	
+    	document.write("<p><center>"+resultado.fontsize(6)+"</p><center>");
+		document.write("<center><h2>"+vetor+"</h2></center>");
+
+
 		}
+		}
+
 	</script>
 	
 </body>
