@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body style = "background-color: #92c0f9">
+<body>
 	<center>
 	<form name="formulario" method="get" action="">
 	Quantos numeros deseja sortear?: <input style="width: 220px" id="Sortear" type="number" name="number1" placeholder="Quantidade de numeros sorteados" min="1" ><br><br>
@@ -21,7 +21,7 @@
 			var maior = parseInt(document.getElementById("Maior").value);
 	    	var menor = parseInt(document.getElementById("Menor").value);
 	    	var sorteio = parseInt(document. getElementById("Sortear").value);
-	    	var resultado = "Os números sorteados são:\n";
+	    	var resultado = "Os numeros sorteados sao:";
 	    	vetor = new Array();
 	   
 	   	if(Maior == 0 || menor ==0 || sorteio==0){
